@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <!--
+      TODO: 
+      1. Make a form with this layout ["PRODUCT" - "DESCRIPTION" - "PRICE" - "ADD IMAGE"] and a sumbit button
+      2. When the sumbit button is pressed the data that have been filed will be added to the mysql table and will be shown under the input form in this format ["PRODUCT IMG" - "PRODUCT NAME" - "PRICE" - "DESCRIPTION"], next to the products there will be a edit button.
+      3. Delete button. You will be able to checkbox the items you want to delete (if im to late i will just add the delete button next to the edit button in the table)
+    -->
+
+    </div>
     <?php
         $servername = "localhost";
         $username = "root";
