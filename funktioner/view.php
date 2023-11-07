@@ -30,7 +30,7 @@ $data = $result->fetch_all(MYSQLI_ASSOC);
     <td><?= htmlspecialchars($row['description']) ?></td>
     <td><?= htmlspecialchars($row['price']) ?></td>
     <td>
-        <img src="image/<?= htmlspecialchars($row['image']) ?>" alt=<?= htmlspecialchars($row['image'])?> >
+        <img src="image/<?= htmlspecialchars($row['image']) ?>" alt=<?= htmlspecialchars($row['image'])?> height="80px" width="80px" >
     </td>
   </tr>
   <?php endforeach ?>
