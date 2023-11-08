@@ -1,7 +1,15 @@
-<?php  
-// include the config.php file to get connected to the Database
-include "funktioner/config.php";
-// inserts new products to the db
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "crud_app";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+// inserts new products to the
 $sql = "INSERT INTO Products (`name`,`description`, `price`, `image`)
 VALUES ('$product', '$description', '$price', '$image')";
 
@@ -15,4 +23,7 @@ $conn->close();
 if(isset($_FILES['image'])){
     move_uploaded_file($_FILES['image']['tmp_name'], "image/". $_FILES['image']['name']);
 }
+    
+
+
 ?>
