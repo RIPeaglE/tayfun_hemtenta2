@@ -24,9 +24,14 @@
         <input type="file" class="form-control" name="image" accept="image/*">
       </div>
       <div class="col-auto">
-        <button type="submit" name="submit" value="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" name="submit" value="submit" class="btn btn-primary">submit</button>
       </div>
+      <button class="btn btn-primary">
+            Uppdate
+        </button>
     </form>
+        
+
   </div>
     <div>
         <?php
@@ -44,6 +49,7 @@
         if (isset($_POST['submit'])){   
             include 'funktioner/insert.php';
         }
+
     ?>     
 </body>
 </html>
