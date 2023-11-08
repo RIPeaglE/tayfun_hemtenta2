@@ -8,20 +8,30 @@
     <title>SQL</title>
 </head>
 <body>
-    
-    <h2>Fill the form</h2>
-    <form action="" method="POST" enctype="multipart/form-data">
-        <input type="text" name="product" placeholder="name" required> 
-        <input type="number" name="price" placeholder="price" required> 
-        <input type="text" name="description" placeholder="description" required>
-        <input type="file" name="image" accept="image/*" required/>
-        <input type="submit" name="submit" value="submit">
+    <div class="p-3 m-0 border-0 bd-example m-0 border-0">
+    <form method="POST" enctype="multipart/form-data" class="row gx-3 gy-2 align-items-center" >
+      <div class="col-auto">
+        <input type="text" class="form-control" name="product" placeholder="Product name">
+      </div>
+      <div class="col-auto">
+        <input type="text" class="form-control" name="description" placeholder="Description">
+      </div>
+      <div class="col-auto">
+        <input type="number" class="form-control" name="price" placeholder="price">
+      </div>
+
+      <div class="col-auto">
+        <input type="file" class="form-control" name="image" accept="image/*">
+      </div>
+      <div class="col-auto">
+        <button type="submit" name="submit" value="submit" class="btn btn-primary">Submit</button>
+      </div>
     </form>
-        <div>
-            <h1>Produkter</h1>
-            <?php
-                include 'funktioner/view.php';
-            ?>
+  </div>
+    <div>
+        <?php
+            include 'funktioner/view.php';
+        ?>
     </div>
     <?php
         include "config.php";
