@@ -1,4 +1,5 @@
 <?php 
+  // include the config.php file to get connected to the Database
 include 'funktioner/config.php';
 // Makes the price change
 $sql = "UPDATE Products SET price = $newPrice WHERE id=$id";
@@ -15,6 +16,7 @@ if(isset($_FILES['newImage'])){
     move_uploaded_file($_FILES['newImage']['tmp_name'], "image/" . $newImage);
     $sqlImageUpdate = "UPDATE Products SET image = '$newImage' WHERE id=$id";
 
+        // Checking if it worked or not
     if ($conn->query($sqlImageUpdate) === TRUE) {
       echo "Image updated successfully";
     } else {

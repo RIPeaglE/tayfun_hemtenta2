@@ -1,14 +1,6 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "crud_app";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+  // include the config.php file to get connected to the Database
+include "funktioner/config.php";
 
 $result = mysqli_query($conn,"SELECT * FROM Products");
 $data = $result->fetch_all(MYSQLI_ASSOC);
@@ -25,8 +17,10 @@ $data = $result->fetch_all(MYSQLI_ASSOC);
           </tr>
         </thead>
         <tbody class="table-group-divider">
+          <!-- Makes a foreach to make a tr ad td for every index in the array -->
         <?php foreach($data as $row): ?>
           <tr style="vertical-align: middle;">
+            <!-- Uses php in the td to show every data in the index -->
             <th scope="row"><?= htmlspecialchars($row['id']) ?></th>
             <td><?= htmlspecialchars($row['name']) ?></td>
             <td><?= htmlspecialchars($row['description']) ?></td>

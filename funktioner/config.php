@@ -20,6 +20,7 @@
         // }
         // mysqli_close($conn);
 
+        // Create Table 
         // $sql = "CREATE TABLE Products (
         //     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
         //     `name` VARCHAR(30) NOT NULL,
