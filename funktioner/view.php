@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 $result = mysqli_query($conn,"SELECT * FROM Products");
 $data = $result->fetch_all(MYSQLI_ASSOC);
 ?>
-
+<!-- html table to for the style and show the data -->
 <table class="table table-hover">
         <thead>
           <tr>
@@ -25,7 +25,7 @@ $data = $result->fetch_all(MYSQLI_ASSOC);
           </tr>
         </thead>
         <tbody class="table-group-divider">
-        <?php foreach($data as $row):           ?>
+        <?php foreach($data as $row): ?>
           <tr style="vertical-align: middle;">
             <th scope="row"><?= htmlspecialchars($row['id']) ?></th>
             <td><?= htmlspecialchars($row['name']) ?></td>
@@ -34,7 +34,8 @@ $data = $result->fetch_all(MYSQLI_ASSOC);
             <td>
               <img src="image/<?= htmlspecialchars($row['image']) ?>" alt=<?= htmlspecialchars($row['image'])?> height="65px" width="65px">
             </td>
-            <td>
+            <td> 
+              <!-- button for deleting data -->
               <form method="POST">
                 <button type="submit" name="delete" value="<?= htmlspecialchars($row['id']) ?>" class="btn btn-danger">Delete</button>
               </form>

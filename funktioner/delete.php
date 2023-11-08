@@ -1,6 +1,6 @@
 <?php
 include "funktioner/config.php";
-
+// deletes the product from the db
 $sql = "DELETE FROM Products WHERE id=$id";
 
 if ($conn->query($sql) === TRUE) {
